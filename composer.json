@@ -1,0 +1,13 @@
+{
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "bref/bref": "^0.5.9",
+        "urbanindo/yii2-dynamodb": "^2.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
