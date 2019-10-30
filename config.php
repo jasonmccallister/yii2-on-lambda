@@ -7,4 +7,14 @@ return [
     'aliases' => [
         '@app' => __DIR__,
     ],
+    'components' => [
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'enableStrictParsing' => false,
+            'rules' => [
+                'posts' => 'site/index',
+            ],
+        ],
+    ],
 ];
