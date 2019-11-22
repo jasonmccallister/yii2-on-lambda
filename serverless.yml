@@ -1,5 +1,4 @@
-service: app
-
+service: yii2-lambda
 provider:
     name: aws
     region: us-east-1
@@ -9,12 +8,21 @@ plugins:
     - ./vendor/bref/bref
 
 functions:
-    api:
+    web:
         handler: web/index.php
-        description: 'Handle traffice for the Yii 2 application on Lambda'
+        description: 'Handle traffic for the Yii 2 application on Lambda'
         timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
         layers:
             - ${bref:layer.php-73-fpm}
         events:
             -   http: 'ANY /'
             -   http: 'ANY /{proxy+}'
+    graphql:
+        handler: web/index.php # pretend this is the graphql/indx.php
+        description: 'Handle GraphQL on Lambda'
+        timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
+        layers:
+            - ${bref:layer.php-73-fpm}
+        events:
+            -   http: 'POST /'
+            -   http: 'POST /{proxy+}'

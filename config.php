@@ -14,6 +14,27 @@ return [
             'enableStrictParsing' => false,
             'rules' => [
                 'posts' => 'site/index',
+                'view' => 'site/view',
+            ],
+        ],
+        'request' => [
+            'enableCookieValidation' => false,
+            'enableCsrfValidation' => false,
+        ],
+        'view' => [
+            'class' => 'yii\web\View',
+            'renderers' => [
+                'twig' => [
+                    'class' => 'yii\twig\ViewRenderer',
+                    'cachePath' => '@runtime/Twig/cache',
+                    'options' => [
+                        'auto_reload' => true,
+                    ],
+                    'globals' => [
+                        'html' => ['class' => '\yii\helpers\Html'],
+                    ],
+                    'uses' => ['yii\bootstrap'],
+                ],
             ],
         ],
     ],

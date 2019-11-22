@@ -2,7 +2,9 @@
     "require": {
         "yiisoft/yii2": "~2.0.0",
         "bref/bref": "^0.5.9",
-        "urbanindo/yii2-dynamodb": "^2.0"
+        "urbanindo/yii2-dynamodb": "^2.0",
+        "yiisoft/yii2-twig": "^2.2",
+        "bref/logger": "^1.0"
     },
     "repositories": [
         {
