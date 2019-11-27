@@ -31,7 +31,8 @@ return [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
-                '/' => 'site/view',
+                'posts' => 'site/index',
+                '/' => 'site/home',
             ],
         ],
         'request' => [
