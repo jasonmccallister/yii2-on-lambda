@@ -20,6 +20,7 @@ return [
         'request' => [
             'enableCookieValidation' => false,
             'enableCsrfValidation' => false,
+            'scriptUrl' => 'index.php',
         ],
         'view' => [
             'class' => 'yii\web\View',
