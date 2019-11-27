@@ -6,6 +6,7 @@ return [
     'controllerNamespace' => 'app\controllers',
     'aliases' => [
         '@app' => __DIR__,
+        '@tmp' => '/tmp'
     ],
     'components' => [
         'urlManager' => [
@@ -27,7 +28,7 @@ return [
             'renderers' => [
                 'twig' => [
                     'class' => 'yii\twig\ViewRenderer',
-                    'cachePath' => '@runtime/Twig/cache',
+                    'cachePath' => '@tmp/twig/cache',
                     'options' => [
                         'auto_reload' => true,
                     ],
