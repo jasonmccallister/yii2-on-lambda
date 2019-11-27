@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use Bref\Logger\StderrLogger;
+use Parsedown;
 use Yii;
 use yii\web\Controller;
 
@@ -17,10 +18,14 @@ class SiteController extends Controller
         return $this->asJson(['hello' => 'world']);
     }
 
-    public function actionView()
+    public function actionHome()
     {
+        $parsedown = new Parsedown();
+        $content = file_get_contents('../content/article-one.md');
+
         return $this->render('view.twig', [
-            'hello' => 'world'
+            'hello' => 'world',
+            'content' => $parsedown->text($content),
         ]);
     }
 }

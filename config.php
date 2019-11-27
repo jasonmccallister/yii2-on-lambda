@@ -8,21 +8,8 @@ return [
         '@app' => __DIR__,
         '@tmp' => '/tmp'
     ],
+    'layout' => 'main.html.twig',
     'components' => [
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'enableStrictParsing' => false,
-            'rules' => [
-                'posts' => 'site/index',
-                'view' => 'site/view',
-            ],
-        ],
-        'request' => [
-            'enableCookieValidation' => false,
-            'enableCsrfValidation' => false,
-            'scriptUrl' => 'index.php',
-        ],
         'view' => [
             'class' => 'yii\web\View',
             'renderers' => [
@@ -38,6 +25,19 @@ return [
                     'uses' => ['yii\bootstrap'],
                 ],
             ],
+        ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'enableStrictParsing' => false,
+            'rules' => [
+                '/' => 'site/view',
+            ],
+        ],
+        'request' => [
+            'enableCookieValidation' => false,
+            'enableCsrfValidation' => false,
+            'scriptUrl' => 'index.php',
         ],
     ],
 ];
