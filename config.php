@@ -38,7 +38,7 @@ return [
         'request' => [
             'enableCookieValidation' => false,
             'enableCsrfValidation' => false,
-            'scriptUrl' => 'index.php',
+            'scriptUrl' => 'dev',
         ],
     ],
 ];
